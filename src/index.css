@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --background: #060912;
+  --surface: #0d1421;
+  --surface-elevated: linear-gradient(
+    180deg,
+    rgba(18, 28, 45, 0.94),
+    rgba(10, 14, 24, 0.96)
+  );
+  --border: rgba(158, 170, 193, 0.14);
+  --border-strong: rgba(158, 170, 193, 0.22);
+  --text-strong: #f3f7ff;
+  --text-soft: #c3cfdf;
+  --text-muted: #8d99ad;
+  --accent: #7ef7ba;
+  --info: #8cbcff;
+  --shadow-soft: 0 18px 60px rgba(2, 8, 19, 0.42);
+  --body-font: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  --heading-font: 'Space Grotesk', 'Avenir Next', sans-serif;
+  font-family: var(--body-font);
+  font-size: 16px;
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(126, 247, 186, 0.06), transparent 30%),
+    radial-gradient(circle at 85% 12%, rgba(110, 168, 254, 0.12), transparent 25%),
+    linear-gradient(180deg, #04070f 0%, #07101b 45%, #04070f 100%);
+  color: var(--text-soft);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 92%);
+}
+
+a,
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+h1,
+h2,
+h3,
+strong {
+  font-family: var(--heading-font);
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
